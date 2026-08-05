@@ -1,0 +1,45 @@
+1. Advantages of java
+
+Java is a simple and easy to understand syntax.
+It removes complex features like pointers and method overloading, making program to write easier and debug.
+Java does not uses pointers which reduce security risks.
+It provides features like byte code verification and java virtual machine.
+Java follows WORA(Write Once, Run Anywhere) principle.
+A java program run on any operating system has a java virtual machine.
+Java is based on object-oriented programming (OOP).
+It improve code reusability, flexibility, and maintainability.
+Java also provides an automatic memory management through garbage collection.
+Java supports multithreading, allowing multiple tasks to run at the same time.
+This improves the performance and efficiency of applications.
+Java programs can be executed on different platforms without changing the code.
+This makes a java highly portable programming language.
+Java supports distributed applications, enabling multiple computers to share data and resources efficiently.
+It is reliable and stable for developing enterprise applications.
+
+2. Program to print Student details
+
+package assignment;
+
+public class Studentdetails {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int rollno = 1;
+		String name = "Sudharsan";
+		String course = "Software Testing";
+		String institute = "Soft Logic Systems";
+		System.out.println("Rollno: " + rollno);
+		System.out.println("Name: " + name);
+		System.out.println("Course: " + course);
+		System.out.println("Institute: " + institute);
+	}
+
+}
+
+Ouput:
+
+Rollno: 1
+Name: Sudharsan
+Course: Software Testing
+Institute: Soft Logic Systems
+
