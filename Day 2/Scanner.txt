@@ -1,0 +1,33 @@
+1. Get the input from user and perform arithmetic operations (Add,Sub,Mul and Div)
+
+package assignment;
+import java.util.Scanner;
+
+public class Arithmetic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter A:");
+		int a = sc.nextInt();
+		System.out.println("Enter B:");
+		int b = sc.nextInt();
+		System.out.println("Addition:" + (a+b));
+		System.out.println("Subtraction:" + (a-b));
+		System.out.println("Multiplication:" + (a*b));
+		System.out.println("Division:" + (a/b));
+		sc.close();
+	}
+
+}
+
+Output:
+
+Enter A:
+25
+Enter B:
+15
+Addition:40
+Subtraction:10
+Multiplication:375
+Division:1
