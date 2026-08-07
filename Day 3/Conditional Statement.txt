@@ -1,0 +1,87 @@
+1.Use if-else to find the greatest of three numbers.
+
+package assignment;
+import java.util.Scanner;
+public class Greatestnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter A:");
+		int a = sc.nextInt();
+		System.out.println("Enter B:");
+		int b = sc.nextInt();
+		System.out.println("Enter C:");
+		int c = sc.nextInt();
+		if(a>b && a>c) {
+			System.out.println("A is greatest");
+		}
+		else if(b>a && b>c) {
+			System.out.println("B is greatest");
+		}
+		else if(c>a && c>b) {
+			System.out.println("C is greatest");
+		}
+		sc.close();
+	}
+
+}
+
+Output:
+
+Enter A:
+35
+Enter B:
+36
+Enter C:
+45
+C is greatest
+
+2.Implement a calculator using switch statement.
+
+package assignment;
+import java.util.Scanner;
+public class Calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter A:");
+		int a = sc.nextInt();
+		System.out.println("Enter B:");
+		int b = sc.nextInt();
+		System.out.println("Enter: Add/Sub/Mul/Div");
+		String c = sc.next();
+		switch (c) {
+		
+		case "Add":
+			System.out.println("Add:" + (a+b) );
+			break;
+		case "Sub":
+			System.out.println("Sub:" + (a-b) );
+			break;
+		case "Mul":
+			System.out.println("Mul:" + (a*b) );
+			break;
+		case "Div":
+			System.out.println("Div:" + (a/b) );
+			break;
+		default:
+			System.out.println("Opertion cannot be performed");
+		}
+		sc.close();
+	}
+
+}
+
+Output:
+
+Enter A:
+25
+Enter B:
+15
+Enter: Add/Sub/Mul/Div
+Add
+Add:40
+
+
