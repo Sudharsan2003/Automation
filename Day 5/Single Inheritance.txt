@@ -1,0 +1,33 @@
+1. 
+
+package assignment;
+
+class Animal{
+	void sound() {
+		System.out.println("The cat meows");
+	}
+	void sleep() {
+		System.out.println("The cat is sleeping");
+	}
+	void walk() {
+		System.out.println("The cat is walking");
+	}
+}
+
+public class Cat extends Animal{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cat c = new Cat();
+		c.sound();
+		c.sleep();
+		c.walk();
+	}
+
+}
+
+Output:
+
+The cat meows
+The cat is sleeping
+The cat is walking
