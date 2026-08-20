@@ -1,0 +1,66 @@
+1.What is Exception? Write a program for exception handling
+
+An exception is an event that occurs during the execution of a program and disrupts the normal flow of instructions. 
+Exceptions are handled using try, catch, finally, throw, and throws keywords to prevent the program from terminating abruptly.
+
+Example:
+
+package assignment;
+
+public class ExceptionConcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			int a = 5/0;
+			System.out.println(a);
+		}catch(Exception e) {
+			System.out.println("Cannot Divided By Zero");
+		}finally {
+			System.out.println("Finally block executed");
+		}
+	}
+
+}
+
+Output:
+
+Cannot Divided By Zero
+Finally block executed
+
+2.What is Collections? Write a program to remove duplicate names using Collections
+
+Collections in Java is a framework that provides classes and interfaces to store, manage, and manipulate groups of objects efficiently. 
+
+It includes useful data structures such as List, Set, Queue, and Map.
+
+List – Stores ordered elements and allows duplicates. 
+
+Set – Stores unique elements (no duplicates). 
+
+Map – Stores key-value pairs.
+
+Example:
+
+package assignment;
+import java.util.*;
+public class Collections {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashSet<String> name = new HashSet<>();
+		name.add("Sudharsan");
+		name.add("Vishal");
+		name.add("Sandeep");
+		name.add("Vishal"); // duplicate
+		name.add("Kishore");
+		name.add("Sandeep"); // duplicate
+		name.add("Subiksha");
+		System.out.println(name);
+	}
+
+}
+
+Output:
+
+[Sudharsan, Sandeep, Subiksha, Kishore, Vishal]
