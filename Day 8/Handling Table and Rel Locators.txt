@@ -1,0 +1,71 @@
+1.Handle the table in https://demoqa.com/webtables and display the output
+
+
+package SeleniumPractice;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Tablehle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://demoqa.com/webtables");
+		WebElement table = driver.findElement(By.tagName("table"));
+		List<WebElement> rows = table.findElements(By.tagName("tr"));
+		for(WebElement row:rows) {
+			List<WebElement> cells = row.findElements(By.tagName("td"));
+			for(WebElement cell:cells) {
+				String data = cell.getText();
+				System.out.print(data+" ");
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+Output:
+
+
+Cierra Vega 39 cierra@example.com 10000 Insurance  
+Alden Cantrell 45 alden@example.com 12000 Compliance  
+Kierra Gentry 29 kierra@example.com 2000 Legal  
+
+2.https://demoqa.com/text-box : Click the "Submit" button with reference to "Permanent Address" by using Relative Locators
+
+package SeleniumPractice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
+
+
+public class BottomElnt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://demoqa.com/text-box");
+		WebElement pa = driver.findElement(By.id("permanentAddress"));
+		pa.sendKeys("Theni");
+		WebElement button = driver.findElement(RelativeLocator.with(By.tagName("button")).below(pa));
+		button.click();
+		WebElement par = driver.findElement(By.cssSelector("p#permanentAddress"));
+		System.out.println(par.getText());
+		
+	}
+
+}
+
+Output:
+
+Permananet Address :Theni
+
