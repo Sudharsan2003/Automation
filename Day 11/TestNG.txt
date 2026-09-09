@@ -1,0 +1,26 @@
+package testpkg;
+
+import org.testng.annotations.Test;
+
+public class AtmTest {
+    @Test(priority = 1)
+    public void testInsertCard() {
+        System.out.println("Card Inserted Successfully");
+    }
+    @Test(priority = 3, dependsOnMethods = "testReadCard")
+    public void testCheckBalance() {
+        System.out.println("Balance Displayed");
+    }
+    @Test(priority = 2, dependsOnMethods = "testInsertCard")
+    public void testReadCard() {
+        System.out.println("Card Read Successfully");
+    }
+    @Test(priority = 4, dependsOnMethods = "testCheckBalance")
+    public void testWithdraw() {
+        System.out.println("Amount Withdrawn");
+    }
+    @Test(priority = 5, dependsOnMethods = "testWithdraw")
+    public void testCardOut() {
+        System.out.println("Card Removed Successfully");
+    }
+}
